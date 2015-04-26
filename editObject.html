@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="ObjectController as oc">
+<div ng-repeat="(oldKey,value) in oc.student">
+    <label>Attribute</label>
+    <input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="oc.updateKey(newKey, oldKey)">
+    <label>Name</label>
+    <input type="text" ng-model="newValue" ng-init="newValue=value" ng-blur="oc.updateValue(newValue,oldKey)">
+</div>
+{{oc.student}}
+<script src="angular.min.js"></script>
+<script src="ObjectController.js"></script>
+</body>
+</html>
