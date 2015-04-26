@@ -5,11 +5,11 @@
     <title></title>
 </head>
 <body ng-controller="ObjectController as oc">
-<div ng-repeat="(oldKey,value) in oc.student">
+<div ng-repeat="oldKey in oc.notSorted(oc.student)">
     <label>Attribute</label>
     <input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="oc.updateKey(newKey, oldKey)">
     <label>Name</label>
-    <input type="text" ng-model="newValue" ng-init="newValue=value" ng-blur="oc.updateValue(newValue,oldKey)">
+    <input type="text" ng-model="newValue" ng-init="newValue=oc.student[oldKey]" ng-blur="oc.updateValue(newValue,oldKey)">
 </div>
 {{oc.student}}
 <script src="angular.min.js"></script>
