@@ -12,6 +12,9 @@ myApp.controller('ObjectController', [function () {
             oc.student[newKey] = oc.student[oldKey];
             delete oc.student[oldKey];
         }
+        if(oc.student.hasOwnProperty("")){
+            delete oc.student[""];
+        }
     };
 
     oc.updateValue = function (newValue, key) {
@@ -25,6 +28,11 @@ myApp.controller('ObjectController', [function () {
         else {
             return Object.keys(object);
         }
-    }
+    };
+
+    oc.addNewKey = function(){
+        oc.student[""] = "" ;
+        console.log("Test");
+        };
 
 }]);
