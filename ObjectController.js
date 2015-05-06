@@ -32,7 +32,6 @@ myApp.controller('ObjectController', [function () {
 
     oc.addNewKey = function(){
         oc.student[""] = "" ;
-        console.log("Test");
         };
 
 }]);
