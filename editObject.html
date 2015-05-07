@@ -5,13 +5,19 @@
     <title></title>
 </head>
 <body ng-controller="ObjectController as oc">
+<h2>Key-Value:</h2>
 <div ng-repeat="oldKey in oc.notSorted(oc.student)">
-    <label>Attribute</label>
+    <label>Key {{$index+1}}</label>
     <input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="oc.updateKey(newKey, oldKey)">
-    <label>Name</label>
+    <label>Value {{$index+1}}</label>
     <input type="text" ng-model="newValue" ng-init="newValue=oc.student[oldKey]" ng-blur="oc.updateValue(newValue,oldKey)">
 </div>
+</br>
+<em>Click on 'Add' to add another key-value pair.</em>
+</br>
+</br>
 <input type="button" value="Add" ng-click="oc.addNewKey()"/>
+<h2>Object:</h2>
 {{oc.student}}
 <script src="angular.min.js"></script>
 <script src="ObjectController.js"></script>
