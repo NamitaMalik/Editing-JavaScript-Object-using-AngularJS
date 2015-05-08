@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body ng-controller="ObjectController as oc">
+<body ng-controller="ObjectController as objectController">
 <h2>Key-Value:</h2>
-<div ng-repeat="oldKey in oc.notSorted(oc.student)">
+
+<div ng-repeat="oldKey in objectController.notSorted(objectController.student)">
     <label>Key {{$index+1}}</label>
-    <input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="oc.updateKey(newKey, oldKey)">
+    <input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="objectController.updateKey(newKey, oldKey)">
     <label>Value {{$index+1}}</label>
-    <input type="text" ng-model="newValue" ng-init="newValue=oc.student[oldKey]" ng-blur="oc.updateValue(newValue,oldKey)">
+    <input type="text" ng-model="newValue" ng-init="newValue=objectController.student[oldKey]"
+           ng-blur="objectController.updateValue(newValue,oldKey)">
 </div>
 </br>
 <em>Click on 'Add' to add another key-value pair.</em>
 </br>
 </br>
-<input type="button" value="Add" ng-click="oc.addNewKey()"/>
+<input type="button" value="Add" ng-click="objectController.addNewKey()"/>
+
 <h2>Object:</h2>
-{{oc.student}}
+{{objectController.student}}
 <script src="angular.min.js"></script>
 <script src="ObjectController.js"></script>
 </body>

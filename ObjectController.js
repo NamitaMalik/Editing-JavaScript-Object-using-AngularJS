@@ -1,37 +1,27 @@
 /**
- * Created by namita on 25/4/15.
+ * Created by Namita malik on 25/4/15.
  */
-
-var myApp = angular.module('myApp', []);
-myApp.controller('ObjectController', [function () {
-    var oc = this;
-    oc.student = {name: "Namita", age: "16", class:"XII", school:"BBPS"};
-
-    oc.updateKey = function (newKey, oldKey) {
-        if (newKey !== oldKey) {
-            oc.student[newKey] = oc.student[oldKey];
-            delete oc.student[oldKey];
-        }
-        if(oc.student.hasOwnProperty("")){
-            delete oc.student[""];
-        }
-    };
-
-    oc.updateValue = function (newValue, key) {
-        oc.student[key] = newValue;
-    };
-
-    oc.notSorted = function (object) {
-        if (!object) {
-            return [];
-        }
-        else {
-            return Object.keys(object);
-        }
-    };
-
-    oc.addNewKey = function(){
-        oc.student[""] = "" ;
+(function (ng) {
+    var myApp = ng.module('myApp', []);
+    myApp.controller('ObjectController', [function () {
+        var objectController = this;
+        objectController.student = {name: "Namita", age: "16", class: "XII", school: "BBPS"};
+        objectController.updateKey = function (newKey, oldKey) {
+            if (newKey == "") {
+                delete objectController.student[oldKey];
+            } else if (newKey !== oldKey) {
+                objectController.student[newKey] = objectController.student[oldKey];
+                delete objectController.student[oldKey];
+            }
         };
-
-}]);
+        objectController.updateValue = function (newValue, key) {
+            objectController.student[key] = newValue;
+        };
+        objectController.notSorted = function (object) {
+            return object ? Object.keys(object) : [];
+        };
+        objectController.addNewKey = function () {
+            objectController.student[""] = "";
+        };
+    }]);
+})(angular);
