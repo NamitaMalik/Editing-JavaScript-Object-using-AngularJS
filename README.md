@@ -93,7 +93,7 @@ Here is explanation of both the cases:
 ####1 : Modify the existing keys/values.
 1. We have an `updateKey` function, which is called as soon as user modifies the key. `updateKey()` is called on the **blur** **event** of the **key** field.
 2. `updateKey()` takes two parameters i.e. `newKey` and `oldKey`, names of which are self explanatory.
-3. Now, let's move on to `HTML` for a while and see what is happening there. Here is the line which we need to investigate these two lines specifically:
+3. Now, let's move on to `HTML` for a while and see what is happening there. We need to investigate these two lines specifically:
  `<div ng-repeat="oldKey in objectController.notSorted(objectController.student)">`
  and
 `<input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="objectController.updateKey(newKey, oldKey)">`.
