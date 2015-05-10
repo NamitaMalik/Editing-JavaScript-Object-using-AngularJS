@@ -98,7 +98,7 @@ Here is explanation of both the cases:
  and
 `<input type="text" ng-model="newKey" ng-init="newKey=oldKey" ng-blur="objectController.updateKey(newKey, oldKey)">`.
 4. We are iterating the object using the **ng-repeat** directive and hence we are using the `oldKey`, as an **object** can be iterated using the **key**.
-5. There is an **ng-model** on the **key** field. This model has been bind to to the `newKey`. We are initializing the value of `newKey` with the `oldKey`.
+5. There is an **ng-model** on the **key** field. This model has been bind to the `newKey`. We are initializing the value of `newKey` with the `oldKey`.
 6. We know that **blur** event is fired when an element looses focus, so when a user ends updating the **key** and moves to the other field using **keyboard** or **clicks** anywhere, `updateKey` function would be called which would take both `newKey` and `oldKey` as its arguments.
 7. Now, coming back to our `updateKey` function, we check that if `newKey` is not equal to `oldKey`, I pass the value in the `oldKey` to the `newKey` and then delete the `oldKey` using the **delete** operator.
 8. In case user updates an existing key with an empty **string**, in that case, key would be deleted as empty key would not make sense.
