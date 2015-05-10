@@ -111,6 +111,6 @@ So this was all about updating key and value. Now let's take up the second case:
 ####2. Add new key/value.
 
 1. On clicking the "Add" button, `addNewKey` function is called.
-2. In the `addKey` function, we are simply adding an empty **string** as the key and assigning empty **string** as a value to it. Now, as soon as user enters a **key** in this newly added **key** field and the field looses the focus, our `updateKey()` function would be called, which would then do all the magic explained above.
+2. In the `addNewKey` function, we are simply adding an empty **string** as the key and assigning empty **string** as a value to it. Now, as soon as user enters a **key** in this newly added **key** field and the field looses the focus, our `updateKey()` function would be called, which would then do all the magic explained above.
 
 Well, this was all about editing objects, you can checkout the full working source code from [here](https://github.com/NamitaMalik/Editing-JavaScript-Object-using-AngularJS).
