@@ -72,11 +72,11 @@ Here is the **HTML** and **JavaScript** code for it:
     }]);
 })(angular);
 ```
-Before starting with the actual logic in the above code, please note that I have written the above code in **controller as** syntax. Here are a few points for that:
+Before starting with the actual logic in the above code, please note that the above code is written in **controller as** syntax. Here are a few points for that:
 
 1. I have created an alias `objectController` for my controller `ObjectController` here `<body ng-controller="ObjectController as objectController">`.
-2. In the `Controller`, I have not passed **$scope** object to the function, instead I have created a variable named `objectController` and assigned `this` to it. Instead of hanging around with **$scope**, we have added model data and the behaviour to the **controller** instance.
-3. Instead of defining function with **$scope**, we define it on **this** (`objectController`).
+2. In the `Controller`, I have not passed **$scope** object to the function, instead created a variable named `objectController` and assigned `this` to it. Instead of hanging around with **$scope**, I have added model data and the behaviour to the **controller** instance.
+3. Instead of defining function with **$scope**, I have defined it on **this** (`objectController`).
 4. Using **controller as** syntax is a personal choice, but I am finding it more readable and consistent and also I am getting rid of the `$scope`.
 
 Let's now come to the actual **scope** of this post, i.e. editing a **JavaScript** **Object**.
