@@ -1,0 +1,8 @@
+title: Editing Javascript Object using Angularjs
+description: This blog demonstrates how JavaScript objects can be edited using AngularJS.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-hacker
+
+gems:
+  - jekyll-mentions
